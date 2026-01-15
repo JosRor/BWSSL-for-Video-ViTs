@@ -1,3 +1,8 @@
-# BWSSL-for-Video-ViTs
+# Depth-Wise Representation Development Under Blockwise Self-Supervised Learning for Video Vision Transformers
+[[`Paper`](https://arxiv.org/abs/2601.09040)]
 
+## Abstract:
+End-to-end backpropagation couples all layers through a global error signal, enabling coordinated learning but requiring long-range credit assignment. Motivated by recent progress in blockwise self-supervised learning (BWSSL), we ask whether masked video transformers can be trained without end-to-end backpropagation. Applying BWSSL to masked video modeling remains relatively underexplored and must handle spatiotemporal context and long-range temporal structure. More broadly, analyses that compare BWSSL and end-to-end training in terms of learning dynamics and depth-wise representation development remain sparse. We apply blockwise learning to a masked autoencoding video vision transformer by partitioning the encoder into blocks, each of which is optimized with a local masked reconstruction loss. Across model sizes and partition granularities, training converges and yields representations close to matched end-to-end baselines under linear-probe and retrieval proxies. In order to compare intermediate representations, we analyze depth-wise decodability, inter-block similarity, and patch-level diagnostics. Blockwise training exposes higher-level structure earlier, while later blocks saturate and operate in a more geometry-preserving regime. It can also induce token-level shifts consistent with stronger early mixing that pooled metrics can miss. These findings point to late-block saturation and interface formation as contributors to the remaining gap. 
+
+## Codebase
 We currently release the evaluation code and the scripts used to generate the figures. We plan to make the training code publicly available upon publication of the paper.
